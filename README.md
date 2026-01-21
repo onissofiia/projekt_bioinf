@@ -19,7 +19,7 @@ leukemia_article.tex   -Plik źródłowy LaTeX generujący raport naukowy.
 
 Jak uruchomić?
 
-Sklonuj repozytorium lub pobierz wszystkie pliki. Otwórz terminal w folderze projektu. Nadaj plikowi prawa do wykonywania: chmod +x run_projekt.sh Uruchom grę: ./run_projekt.sh
+Sklonuj repozytorium lub pobierz wszystkie pliki. Otwórz terminal w folderze projektu. Nadaj plikowi prawa do wykonywania: chmod +x run_projekt.sh ,Uruchom: ./run_projekt.sh
 
 Autor
 Sofiya Aniskevich
