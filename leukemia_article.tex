@@ -1,0 +1,70 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{setspace}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\title{\textbf{Comparison of Gene Expression Profiles in ALL and AML}}
+\author{Sofiya Aniskevich}
+\date{23.01.2026}
+
+\begin{document}
+\maketitle
+
+\section*{Introduction and Data}
+
+Gene expression profiling plays a key role in modern bioinformatics and cancer research.
+In this project, we analyze a classic leukemia dataset published by Golub et al. (1999),
+which demonstrated that acute lymphoblastic leukemia (ALL) and acute myeloid leukemia (AML)
+can be distinguished based on gene expression patterns measured using DNA microarrays.
+
+The dataset contains expression values for several thousand genes measured in bone marrow
+and peripheral blood samples. Mean expression values were calculated separately for ALL
+and AML samples, resulting in two distributions representing global gene expression
+profiles for each leukemia subtype.
+
+\section*{Methods}
+
+All analyses were performed in a Linux terminal environment.
+Mean gene expression values for ALL and AML samples were computed using command-line
+text processing tools.
+Specifically, the \texttt{awk} utility was used to parse the expression matrix and
+calculate per-gene mean expression levels for each leukemia subtype.
+
+Data visualization was carried out using \texttt{gnuplot}.
+The resulting mean expression values were summarized using boxplots, which provide
+a robust statistical representation of the distribution of gene expression levels,
+including medians, quartiles, and extreme values.
+
+\section*{Results}
+
+Figure~1 presents boxplots of mean gene expression values for ALL and AML.
+Each point corresponds to a single gene, while the boxplots summarize the overall
+distribution of expression levels.
+
+\begin{center}
+\includegraphics[width=0.75\linewidth]{leukemia_expression_boxplot.png}
+
+\small
+\textbf{Figure 1.} Distribution of mean gene expression values in ALL and AML samples.
+\end{center}
+
+The median expression levels are similar for both leukemia types, indicating that
+most genes exhibit comparable expression across ALL and AML.
+However, both distributions contain extreme values, corresponding to a subset of genes
+with very high or very low expression levels.
+Notably, AML shows slightly more pronounced high-expression outliers, suggesting the
+presence of genes that may be specifically overexpressed in myeloid leukemia.
+
+\section*{Conclusion}
+
+This analysis demonstrates that while global gene expression patterns in ALL and AML
+are broadly similar, biologically relevant differences arise from a limited number of
+genes with extreme expression values. Such genes may serve as potential markers for
+leukemia classification.
+
+\end{document}
